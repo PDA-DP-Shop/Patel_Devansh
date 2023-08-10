@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="shortcut icon" href="./photo/D.P transparent.png" type="image/x-Icon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Monoton&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Monoton&family=Tektur&family=Vina+Sans&display=swap"
+    rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="task_4_3.css">
+
+  <style>
+    .dp {
+      font-family: 'Dancing Script', cursive;
+      font-family: 'Monoton', cursive;
+
+      font-size: 122px;
+
+      background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSgPiDnoy2FGmg_Ab2OH-bhsDgy7ohlGu31g&usqp=CAU");
+      background-repeat: no-repeat;
+      background-size: 1350px 185px;
+
+      border-radius: 25px;
+
+      color: gold;
+
+      margin: 12px;
+    }
+  </style>
+
+  <title>DP</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin: 12px; border-radius: 25px;">
+    <div class="container-fluid">
+      <img src="./photo/logo9_5_123639.jpeg" width="25" height="25" class="i"
+        style="border-radius: 25px; margin-right: 10px;">
+
+      <a class="navbar-brand" style="cursor: none;">DP Shop</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="task_4_1_home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="task_4_2_About.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="task_4_3_items.html">Items</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <form class="d-flex" style="margin-left: 356px;">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+          style="border-radius: 25px;">
+        <a href="https://www.google.com/">
+          <button class="btn btn-outline-success" type="button"
+            style="border-radius: 25px; background-color: lightgreen; font-weight: bolder;">Search</button>
+        </a>
+      </form>
+    </div>
+  </nav>
+
+  <center>
+    <p class="dp" style="cursor: default;">
+      ITEMS
+    </p>
+  </center>
+
+  <div class="container_1">
+    <aside class="carousel">
+      <div class="carousel__wrapper">
+        <div class="item" id="slide-0"><img src="./photo/img_1_1.jpg" alt="" width="418" height="418"
+            style="border-radius: 25px;" /></div>
+        <div class="item" id="slide-1"><img src="./photo/img_1_2.jpg" alt="" width="418" height="418"
+            style="border-radius: 25px;" /></div>
+        <div class="item" id="slide-2"><img src="./photo/img_2_1.jpg" alt="" width="418" height="418"
+            style="border-radius: 25px;" /></div>
+        <div class="item" id="slide-3"><img src="./photo/img_2_2.jpg" alt="" width="418" height="418"
+            style="border-radius: 25px;" /></div>
+        <div class="item" id="slide-4"><img src="./photo/img_3_1.jpg" alt="" width="418" height="418"
+            style="border-radius: 25px;" /></div>
+        <div class="item" id="slide-5"><img src="./photo/img_3_2.jpg" alt="" width="418" height="418"
+            style="border-radius: 25px;" /></div>
+        <div class="item" id="slide-6"><img src="./photo/img_1_3.jpg" alt="" width="418" height="418"
+            style="border-radius: 25px;" /></div>
+      </div>
+    </aside>
+    <article class="instagram">
+      <header class="instagram__header">
+        <figure><img src="./photo/logo9_5_123639.jpeg" alt="Jake Dog" width="42" height="42" />
+          <figcaption>
+            <h4>DP SHOP CLOTHES</h4>
+          </figcaption>
+          <img src="./photo/instagram_logo.png" width="35" height="35" style="border-color: bisque; margin-left: 22%;">
+        </figure>
+      </header>
+      <section class="instagram__media">
+        <div class="img"></div>
+      </section>
+      <footer class="instagram__buttons">
+        <div class="left">
+          <img src="./photo/like.png" width="28" height="25" style="margin-right: 16px; cursor: grabbing;">
+
+          <svg class="instagram__icon instagram__icon--comment" fill="none" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24">
+            <path
+              d="M20.656 17.008C21.8711 14.9061 22.2795 12.4337 21.8048 10.0527C21.3301 7.67172 20.0048 5.54497 18.0765 4.06978C16.1482 2.59458 13.7488 1.87186 11.3266 2.0366C8.9043 2.20135 6.62486 3.24231 4.91408 4.96501C3.20329 6.68772 2.17817 8.97432 2.03024 11.3977C1.8823 13.821 2.62166 16.2153 4.1102 18.1334C5.59874 20.0514 7.73463 21.3619 10.1189 21.82C12.5031 22.2782 14.9726 21.8527 17.066 20.623L22 22L20.656 17.008Z">
+            </path>
+          </svg>
+          <svg class="instagram__icon instagram__icon--message" fill="none" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24">
+            <path d="M22 3 9.218 10.083M11.698 20.334 22 3.001H2L9.218 10.084 11.698 20.334Z"></path>
+          </svg>
+        </div>
+        <div class="right">
+          <svg class="instagram__icon instagram__icon--saved" fill="none" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24">
+            <path d="M20 21L12 13.44L4 21V3H20V21Z"></path>
+          </svg>
+        </div>
+      </footer>
+    </article>
+  </div>
+
+  <!-- <center style="margin-top: 25px;">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" style="margin: 12px; border-radius: 25px; width: 800px; height: 25%;">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./photo/img_1.jpg" width="800" height="300" style="border-radius: 15px;">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 style="cursor: default;">Men Clothes</h5>
+                  <p style="cursor: default;">Highlight Exactly What You Do. Your Instagram bio should be a place where you tell your readers exactly who you are.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./photo/img_2.jpg" width="800" height="300" style="border-radius: 15px;">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 style="cursor: default;">Female Clothes</h5>
+                  <p style="cursor: default;">Highlight Exactly What You Do. Your Instagram bio should be a place where you tell your readers exactly who you are.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./photo/img_3.jpg" width="800" height="300" style="border-radius: 15px;">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 style="cursor: default;">Kids Clothes</h5>
+                  <p style="cursor: default;">Highlight Exactly What You Do. Your Instagram bio should be a place where you tell your readers exactly who you are.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+      </center> -->
+
+  <center Style="margin: 25px 12px 12px 12px;">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100" style="border-top-left-radius: 25px; border-top-right-radius: 25px;">
+          <img src="./photo/img_1.jpg" class="card-img-top"
+            style="border-top-left-radius: 25px; border-top-right-radius: 25px;" alt="...">
+          <div class="card-body">
+            <h5 class="card-title" style="cursor: default;">Mens fashion</h5>
+            <p class="card-text" style="cursor: default;">In summary, men's apparel means apparel that is worn by men.
+              Yes, this is a rather simplistic definition. Apparel is synonymous with the words; clothing, fashion,
+              clothes, and garments. Often footwear will also fall under the umbrella of the term apparel.</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+              aria-controls="offcanvasRight">
+              ORDER NOW
+            </button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+              aria-labelledby="offcanvasRightLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasRightLabel" style="cursor: default;">
+                  MALE FASHION
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <div class="card-group">
+                  <div class="card">
+                    <img src="./photo/img_1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title" style="cursor: default;">Flower Shirt</h5>
+                      <p class="card-text" style="cursor: default;">Floral shirts for men. No longer reserved for
+                        Hawaiian holiday or beach parties, floral shirts have become a staple in every gentleman's
+                        wardrobe.</p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="d-grid gap-2 col-6 mx-auto" style="cursor: default;">
+                        <b style="color: green;">RS.2500</b>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <div class="d-grid gap-2 col mx-auto">
+                        <a href="task_4_6_bill.html">
+                          <button type="button" class="btn btn-success w-50">
+                            BUY
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <br>
+
+                <div class="card-group">
+                  <div class="card">
+                    <img src="./photo/img_1_1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title" style="cursor: default;">Dark Blue Jacket</h5>
+                      <p class="card-text" style="cursor: default;">Navy Blue is really easy to combine. It goes well
+                        with dark colors such as brown, autumnal yellow or green leaf but equally with light colors like
+                        white. This color easily combines with a large number of prints.</p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="d-grid gap-2 col-6 mx-auto" style="cursor: default;">
+                        <b style="color: green;">RS.5000</b>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <div class="d-grid gap-2 col mx-auto">
+                        <a href="task_4_6_bill.html">
+                          <button type="button" class="btn btn-success w-50">
+                            BUY
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <br>
+
+                <div class="card-group">
+                  <div class="card">
+                    <img src="./photo/img_1_2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title" style="cursor: default;">Light Blue Jacket</h5>
+                      <p class="card-text" style="cursor: default;">Navy Blue is really easy to combine. It goes well
+                        with dark colors such as brown, autumnal yellow or green leaf but equally with light colors like
+                        white. This color easily combines with a large number of prints.</p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="d-grid gap-2 col-6 mx-auto" style="cursor: default;">
+                        <b style="color: green;">RS.5000</b>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <div class="d-grid gap-2 col mx-auto">
+                        <a href="task_4_6_bill.html">
+                          <button type="button" class="btn btn-success w-50">
+                            BUY
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100" style="border-top-left-radius: 25px; border-top-right-radius: 25px;">
+          <img src="./photo/img_2.jpg" class="card-img-top"
+            style="border-top-left-radius: 25px; border-top-right-radius: 25px;" alt="...">
+          <div class="card-body">
+            <h5 class="card-title" style="cursor: default;">Female fashion</h5>
+            <p class="card-text" style="cursor: default;">Women's clothes are articles of clothing designed for and worn
+              by women. Typical women's clothes include skirts, dresses, shirts, sweaters, trousers, coats, chemises,
+              and jeans. Some articles of clothing and geared specifically towards women, but most of the items are the
+              same as items of men's clothing.</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">
+              ORDER NOW
+            </button>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop"
+              aria-labelledby="offcanvasWithBackdropLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel" style="cursor: default;">
+                  FEMALE CLOTHES
+                </h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                  aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <div class="card-group">
+                  <div class="card">
+                    <img src="./photo/img_2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title" style="cursor: default;">Pink Jacket</h5>
+                      <p class="card-text" style="cursor: default;">Pink jacket is really easy to combine. It goes well
+                        with dark colors such as brown, autumnal yellow or green leaf but equally with light colors like
+                        white. This color easily combines with a large number of prints.</p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="d-grid gap-2 col-6 mx-auto" style="cursor: default;">
+                        <b style="color: green;">RS.7500</b>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <div class="d-grid gap-2 col mx-auto">
+                        <a href="task_4_6_bill.html">
+                          <button type="button" class="btn btn-success w-50">
+                            BUY
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <br>
+
+                <div class="card-group">
+                  <div class="card">
+                    <img src="./photo/img_2_1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title" style="cursor: default;">Blue and white Shirt</h5>
+                      <p class="card-text" style="cursor: default;">The light blue shirt deserves the second spot due to
+                        its strong colour versatility (almost everything goes with it). It's slightly less formal less
+                        than the white shirt, but it gives its wearer a classic look.</p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="d-grid gap-2 col-6 mx-auto" style="cursor: default;">
+                        <b style="color: green;">RS.5500</b>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <div class="d-grid gap-2 col mx-auto">
+                        <a href="task_4_6_bill.html">
+                          <button type="button" class="btn btn-success w-50">
+                            BUY
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <br>
+
+                <div class="card-group">
+                  <div class="card">
+                    <img src="./photo/img_2_2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title" style="cursor: default;">Black Short</h5>
+                      <p class="card-text" style="cursor: default;">Black shorts are probably the easiest to style
+                        because of the dark, neutral silhouette they create. They can also give the illusion of slimmer
+                        legs. Black shorts look great with loose tees, polo tops or even a dressier blouse or button-up
+                        shirt.</p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="d-grid gap-2 col-6 mx-auto" style="cursor: default;">
+                        <b style="color: green;">RS.5000</b>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <div class="d-grid gap-2 col mx-auto">
+                        <a href="task_4_6_bill.html">
+                          <button type="button" class="btn btn-success w-50">
+                            BUY
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100" style="border-top-left-radius: 25px; border-top-right-radius: 25px;">
+          <img src="./photo/img_3.jpg" class="card-img-top"
+            style="border-top-left-radius: 25px; border-top-right-radius: 25px;" alt="...">
+          <div class="card-body">
+            <h5 class="card-title" style="cursor: default;">kids fashion</h5>
+            <p class="card-text" style="cursor: default;">Children's clothing or kids' clothing is clothing for children
+              who have not yet grown to full height. Children's clothing is often more casual than adult clothing, fit
+              for play and rest.</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+              ORDER NOW
+            </button>
+
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+              aria-labelledby="offcanvasWithBothOptionsLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel" style="cursor: default;">
+                  KIDS FASHION
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <div class="card-group">
+                  <div class="card">
+                    <img src="./photo/img_3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title" style="cursor: default;">Gray Jacket</h5>
+                      <p class="card-text" style="cursor: default;">A jacket typically has sleeves, and fastens in the front or slightly on the side. A jacket is generally lighter, tighter-fitting, and less insulating than a coat, which is outerwear. Some jackets are fashionable, while others serve as protective clothing. Jackets without sleeves are vests.</p>
+                    </div>
+                    <div class="card-footer">
+                      <div class="d-grid gap-2 col-6 mx-auto" style="cursor: default;">
+                        <b style="color: green;">RS.3500</b>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <div class="d-grid gap-2 col mx-auto">
+                        <a href="task_4_6_bill.html">
+                          <button type="button" class="btn btn-success w-50">
+                            BUY
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <br>
+
+                <div class="card-group">
+                  <div class="card">
+                    <img src="./photo/img_3_1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title" style="cursor: default;">Light Blue Dress</h5>
+                      <p class="card-text" style="cursor: default;">The secret to making any color combination work with blue is finding complementary. The color that sits across from blue on the color wheel, orange, is its true complement. That can vary depending on the precise shade of blue.</p>
+                    </div><div class="card-footer">
+                      <div class="d-grid gap-2 col-6 mx-auto" style="cursor: default;">
+                        <b style="color: green;">RS.7500</b>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <div class="d-grid gap-2 col mx-auto">
+                        <a href="task_4_6_bill.html">
+                          <button type="button" class="btn btn-success w-50">
+                            BUY
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <br>
+
+                <div class="card-group">
+                  <div class="card">
+                    <img src="./photo/img_3_2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title" style="cursor: default;">Dark Blue jacket</h5>
+                      <p class="card-text" style="cursor: default;">A jacket is a garment for the upper body, usually extending below the hips. A jacket typically has sleeves, and fastens in the front or slightly on the side. A jacket is generally lighter, tighter-fitting, and less insulating than a coat, which is outerwear.</p>
+                    </div><div class="card-footer">
+                      <div class="d-grid gap-2 col-6 mx-auto" style="cursor: default;">
+                        <b style="color: green;">RS.5000</b>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <div class="d-grid gap-2 col mx-auto">
+                        <a href="task_4_6_bill.html">
+                          <button type="button" class="btn btn-success w-50">
+                            BUY
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </center>
+
+  <div class="container"
+    style="background-color: lightblue; margin-top: 30px; margin-top: 12px; margin-bottom: 12px; border-radius: 25px;">
+    <div class="row" style="padding: 30px;">
+      <div class="col" style="padding: 10px;">
+        <img src="./photo/call.png" width="100" height="100">
+      </div>
+      <div class="col" style="padding: 10px;">
+        <img src="./photo/facebook.png" width="100" height="100">
+      </div>
+      <div class="col" style="padding: 10px;">
+        <img src="./photo/instahram.png" width="100" height="100">
+      </div>
+      <div class="col-7" style="font-family: 'Dancing Script', cursive; font-family: 'Monoton', cursive;
+          font-family: 'Tektur', cursive;  font-family: 'Vina Sans', cursive; cursor: default;">
+        Convenience is one of the main reasons people prefer to buy clothes online. You won't have to leave work or take
+        off from the office because you can do online shopping any time of the day. It usually makes the goods or goods
+        for other companies such as retailers or manufacturers. The goods manufactured might be in their brand name or
+        on contract for other brands. They might be unaccepting of their body shape and buy clothes that don't fit well
+        in the belief that they will fit when they reach their target weight.
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+
+  <script src="task_4_3.js"></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js'></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>

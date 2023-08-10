@@ -1,0 +1,17 @@
+.dp
+{
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Monoton', cursive;
+
+    font-size: 122px;
+
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSgPiDnoy2FGmg_Ab2OH-bhsDgy7ohlGu31g&usqp=CAU");
+    background-repeat: no-repeat;
+    background-size: 1350px 185px;
+
+    border-radius: 25px;
+
+    color: gold;
+
+    margin: 12px;
+}
